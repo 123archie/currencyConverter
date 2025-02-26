@@ -10,9 +10,16 @@
     <div class="converter">
         <h2>Currency Converter</h2>
         <form>
-            <div>
-                <label for="#Rupees">Enter amount(in Rs.):</label>
+            <div class="enteredAmt">
+                <label for="#Rupees" class="rupee">Enter amount(in Rs.):</label>
                 <input type="text" name="Rupees" id="Rupees">
+            </div>
+            <div class="convertedAmt">
+                <label for="Dollars" class="dollar">Converted amount(in dollars):</label>
+                <input type="text" name="Dollars" id="Dollars" readonly>
+            </div>
+            <div class="button">
+                <input type="button" value="Convert" id="btn">
             </div>
         </form>
     </div>

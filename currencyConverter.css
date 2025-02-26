@@ -6,6 +6,53 @@ body{
 }
 .converter{
     background-color:white;
-    height:fit-content;
-    width:fit-content;  
+    height:500px;
+    padding: 3%;
+    width:fit-content; 
+    align-items:center;
+}
+h2{
+    display:flex;
+    height: 60px;;
+    align-items: center;
+    justify-content: center;
+}.enteredAmt{
+    display:flex;
+    height:115px;
+    align-items: center;
+}.rupee{
+    font-weight: bold;
+    font-size: larger;
+    margin-right: 7px;
+}#Rupees{
+    font-size: larger;
+    padding: 3px;
+}.convertedAmt{
+    display:flex;
+    height:115px;
+    align-items:center;
+}
+.dollar{
+    font-weight: bold;
+    font-size: larger;
+    margin-right: 7px;
+}#Dollars{
+    font-size: larger;
+    padding: 3px;
+}#Dollars:focus{
+    outline: none;
+}.button{
+    display: flex;
+    height: 125px;
+    align-items: center;
+    justify-content: center;
+}#btn{
+    height:60px;
+    width:150px;
+    background-color: green;
+    border-color: green;
+    font-size: larger;
+    color: white;
+    border-radius: 15px;
+
 }
