@@ -1,12 +1,13 @@
 body{
     display:flex;
+    height:97vh;
     align-items:center;
     justify-content:center;
     background-color: rgba(255, 255, 0, 0.425);
 }
 .converter{
     background-color:white;
-    height:500px;
+    height:fit-content;
     padding: 3%;
     width:fit-content; 
     align-items:center;
@@ -18,7 +19,7 @@ h2{
     justify-content: center;
 }.enteredAmt{
     display:flex;
-    height:115px;
+    height:80px;
     align-items: center;
 }.rupee{
     font-weight: bold;
@@ -29,7 +30,7 @@ h2{
     padding: 3px;
 }.convertedAmt{
     display:flex;
-    height:115px;
+    height:80px;
     align-items:center;
 }
 .dollar{
@@ -54,5 +55,36 @@ h2{
     font-size: larger;
     color: white;
     border-radius: 15px;
-
+    cursor:pointer;
+}.rate{
+    font-weight:bold;
+    font-size: larger;
+    margin-right: 7px;
+}.convertRate{
+    display:flex;
+    height: 60px;
+    align-items:center;
+}
+#conversionRate{
+    font-size: larger;
+}
+#conversionRate:focus{
+    outline: none;
+}.Dropdown{
+    display:flex;
+    height: 60px;
+    align-items: center;
+}.fromList{
+    width: 50%;
+}.toList{
+    width: 50%;
+}
+.fromLabel{
+    font-size: larger;
+    font-weight: bold;
+    margin-right: 7px;
+}.toLabel{
+    font-size: larger;
+    font-weight:bold;
+    margin-right: 7px;
 }

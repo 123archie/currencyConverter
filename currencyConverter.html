@@ -11,12 +11,27 @@
         <h2>Currency Converter</h2>
         <form>
             <div class="enteredAmt">
-                <label for="#Rupees" class="rupee">Enter amount(in Rs.):</label>
+                <label for="#Rupees" class="rupee">Enter amount:</label>
                 <input type="text" name="Rupees" id="Rupees">
             </div>
             <div class="convertedAmt">
-                <label for="Dollars" class="dollar">Converted amount(in dollars):</label>
+                <label for="Dollars" class="dollar">Converted amount:</label>
                 <input type="text" name="Dollars" id="Dollars" readonly>
+            </div>
+            <div class="Dropdown">
+                <div class="fromList">
+                    <label for="from" class="fromLabel">From:</label>
+                    <select name="From: " id="from"></select>
+                </div>
+                <div class="toList">
+                    <label for="to" class="toLabel">To:</label>
+                    <select name="To: " id="to"></select>
+                </div>
+                <div></div>
+            </div>
+            <div class="convertRate">
+                <label for="conversionRate" class="rate">Exchange rate:</label>
+                <input type="text" name="exchrate" id="conversionRate" readonly>
             </div>
             <div class="button">
                 <input type="button" value="Convert" id="btn">
