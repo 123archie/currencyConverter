@@ -87,4 +87,8 @@ h2{
     font-size: larger;
     font-weight:bold;
     margin-right: 7px;
+}#from{
+    font-size: medium;
+}#to{
+    font-size: medium;
 }
