@@ -1,9 +1,11 @@
-let url="https://api.currencyapi.com/v3/latest?apikey=cur_live_WgjDCAuZwfVNUTrYAz4o5PjiIw0B8UppC2JSiHZ5"
+let url=`https://api.currencyapi.com/v3/latest?apikey=cur_live_sNJmb0xPgBPT57q7qub3K88CyAoMKZdCbYuR4A8T`;
+let exchangeURL=`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies`;
 let resp;
 let data, fromCurr, toCurr;
-let countryCode;
+let countryCode, d;
 let imgURL, option;
-let fromVal, toVal;
+let fromVal, toVal, promiseExchange;
+let listValue;
 let exchange=document.querySelector("#conversionRate")
 // let cors=require("cors");
 let from=document.querySelector("#from");
@@ -26,19 +28,23 @@ let promiseSent= async ()=>{
         to.appendChild(option);
     }
 }  
-// (promiseSent)();
+(promiseSent)();
 from.addEventListener("click", (e)=>{
     fromCurr=e.target.value;
-    fromVal=data.data.
-    console.log(fromVal);
+    console.log(fromCurr);
+    (promiseExchange)();
 });
 to.addEventListener("click", (e)=>{
     toCurr=e.target.value;
-    console.log(toCurr); 
-    toVal=data.data.;
-    console.log(toVal);
-    exchange.value=toVal/fromVal;
+    console.log(toCurr);    
+    (promiseExchange)();
 });
+promiseExchange=async ()=>{
+    promise=await fetch(`${exchangeURL}/${from.value.toLowerCase()}.json`);
+    data=await promise.json();
+    listValue=data[[from.value.toLowerCase()]][to.value.toLowerCase()];
+    exchange.value=listValue;
+} 
 
 
 
