@@ -6,17 +6,18 @@ let countryCode, d;
 let imgURL, option;
 let fromVal, toVal, promiseExchange;
 let listValue;
-let exchange=document.querySelector("#conversionRate")
+let exchange=document.querySelector("#conversionRate");
+let enteredAmt=document.querySelector("#Rupees");
+let convertedAmt=document.querySelector("#Dollars");
 // let cors=require("cors");
 let from=document.querySelector("#from");
 let to=document.querySelector("#to");
+let btn=document.querySelector("#btn");
 // app.use(cors);
 let promiseSent= async ()=>{
     console.log("Sending request...");
     resp=await fetch(url);
-    console.log(resp);
     data=await resp.json();
-    console.log(data.data);
     for(countryCode in data.data){
         // imgURL=`https://flagsapi.com/${countryCode}/flat/64.png`
         option=document.createElement("option");
@@ -31,12 +32,10 @@ let promiseSent= async ()=>{
 (promiseSent)();
 from.addEventListener("click", (e)=>{
     fromCurr=e.target.value;
-    console.log(fromCurr);
     (promiseExchange)();
 });
 to.addEventListener("click", (e)=>{
     toCurr=e.target.value;
-    console.log(toCurr);    
     (promiseExchange)();
 });
 promiseExchange=async ()=>{
@@ -44,7 +43,15 @@ promiseExchange=async ()=>{
     data=await promise.json();
     listValue=data[[from.value.toLowerCase()]][to.value.toLowerCase()];
     exchange.value=listValue;
-} 
+}
+btn.addEventListener("click", ()=>{
+    if(!enteredAmt.value){
+        alert("Set amount.");
+    }
+    else{
+        convertedAmt.value=enteredAmt.value*exchange.value;
+    }
+})
 
 
 
