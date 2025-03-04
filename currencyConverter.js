@@ -28,8 +28,15 @@ let promiseSent= async ()=>{
         option.text=countryCode;
         to.appendChild(option);
     }
+    if(from.value===to.value){
+        exchange.value=1;
+    }
 }  
-(promiseSent)();
+try{
+    // (promiseSent)();
+}catch(error){
+    alert("Website down temporarily");
+}
 from.addEventListener("click", (e)=>{
     fromCurr=e.target.value;
     (promiseExchange)();
